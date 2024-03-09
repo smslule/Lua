@@ -14,6 +14,7 @@
 - [x] 第一部分 工艺启停逻辑控制
 	- [x] 1\. ProcessRun(工艺启动)
 	- [x] 2\. ValveControl(阀门脉冲控制)
+	- [x] 3\. SecondsConvert(秒-毫秒转换)
 - [x] 待续...
 
 ## 参与人员（排序不分先后）
