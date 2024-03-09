@@ -1,11 +1,8 @@
 REGION 预处理
     #"FP-run-bnt"(CLK:=#"Comm-run"."bnt-run");
-    #"Motor-Runtimer"[0](IN := #"Comm-run".busy,
-                         PT := #"Screen-Time"."PT-pretime-m");
-    #"Motor-Runtimer"[1](IN := #"Comm-run"."in-timer".%X1,
-                         PT := #"Screen-Time"."PT-runtime");
-    #"Motor-Runtimer"[2](IN := #"Comm-run"."in-timer".%X2,
-                         PT := #"Screen-Time"."PT-runtime");
+    #"Motor-Runtimer"[0](IN := #"Comm-run".busy,PT := #"Screen-Time"."PT-pretime-m");
+    #"Motor-Runtimer"[1](IN := #"Comm-run"."in-timer".%X1,PT := #"Screen-Time"."PT-runtime");
+    #"Motor-Runtimer"[2](IN := #"Comm-run"."in-timer".%X2,PT := #"Screen-Time"."PT-runtime");
     IF "Debug".Unit_estop_state[2] AND "Debug".Screen_state = 1 THEN
         IF #"FP-run-bnt".Q AND NOT #"Comm-run".busy THEN
             #"Comm-run".todo := 1;

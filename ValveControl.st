@@ -1,14 +1,10 @@
 REGION 预处理
     #"FP-valve-Product"(CLK := #"Comm-Valve"."bnt-run");
     #"FP-valve-Manual"(CLK := #"Comm-Valve"."bnt-stop");
-    #"Valve-Timer"[0](IN := #"Comm-Valve".busy,
-                      PT := #"Screen-Time"."PT-pretime-v");
-    #"Valve-Timer"[1](IN := #"Comm-Valve"."in-timer".%X1,
-                      PT := #"Screen-Time"."PT-opentime");
-    #"Valve-Timer"[2](IN := #"Comm-Valve"."in-timer".%X2,
-                      PT := #"Screen-Time"."PT-delaytime");
-    #"Valve-Timer"[3](IN := #"Comm-Valve"."in-timer".%X3,
-                      PT := #"Screen-Time"."PT-looptime");
+    #"Valve-Timer"[0](IN := #"Comm-Valve".busy,PT := #"Screen-Time"."PT-pretime-v");
+    #"Valve-Timer"[1](IN := #"Comm-Valve"."in-timer".%X1,PT := #"Screen-Time"."PT-opentime");
+    #"Valve-Timer"[2](IN := #"Comm-Valve"."in-timer".%X2,PT := #"Screen-Time"."PT-delaytime");
+    #"Valve-Timer"[3](IN := #"Comm-Valve"."in-timer".%X3,PT := #"Screen-Time"."PT-looptime");
     //阀组生产模式
     IF "Debug".Unit_estop_state[2] THEN
         IF (#"FP-valve-Product".Q OR #"Comm-run".todo) AND NOT #"Comm-Valve".busy THEN
