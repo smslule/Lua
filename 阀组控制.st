@@ -112,12 +112,9 @@ REGION 冲洗阀组生产模式
 END_REGION
 
 REGION V4001预处理
-    #"Desand-Timer-1"[0](IN := #"Comm-desand-1".busy,
-                         PT := #"Desand-Time"."PT-pretime");
-    #"Desand-Timer-1"[1](IN := #"Comm-desand-1"."in-timer".%X1,
-                         PT := #"Desand-Time"."PT-opentime");
-    #"Desand-Timer-1"[2](IN := #"Comm-desand-1"."in-timer".%X2,
-                         PT := #"Desand-Time"."PT-looptime");
+    #"Desand-Timer-1"[0](IN := #"Comm-desand-1".busy, PT := #"Desand-Time"."PT-pretime");
+    #"Desand-Timer-1"[1](IN := #"Comm-desand-1"."in-timer".%X1,PT := #"Desand-Time"."PT-opentime");
+    #"Desand-Timer-1"[2](IN := #"Comm-desand-1"."in-timer".%X2,PT := #"Desand-Time"."PT-looptime");
     //生产模式
     IF "Debug".Unit_estop_state[2] THEN
         IF #"Comm-desand-1"."bnt-run" AND NOT #"Comm-desand-1".busy THEN
@@ -168,12 +165,9 @@ REGION V4001生产模式
     END_IF;
 END_REGION
 REGION V6005预处理
-    #"Desand-Timer-2"[0](IN := #"Comm-desand-2".busy,
-                         PT := #"Desand-Time"."PT-pretime");
-    #"Desand-Timer-2"[1](IN := #"Comm-desand-2"."in-timer".%X1,
-                         PT := #"Desand-Time"."PT-opentime");
-    #"Desand-Timer-2"[2](IN := #"Comm-desand-2"."in-timer".%X2,
-                         PT := #"Desand-Time"."PT-looptime");
+    #"Desand-Timer-2"[0](IN := #"Comm-desand-2".busy,PT := #"Desand-Time"."PT-pretime");
+    #"Desand-Timer-2"[1](IN := #"Comm-desand-2"."in-timer".%X1,PT := #"Desand-Time"."PT-opentime");
+    #"Desand-Timer-2"[2](IN := #"Comm-desand-2"."in-timer".%X2,PT := #"Desand-Time"."PT-looptime");
     //生产模式
     IF "Debug".Unit_estop_state[2] THEN
         IF #"Comm-desand-2"."bnt-run" AND NOT #"Comm-desand-2".busy THEN
