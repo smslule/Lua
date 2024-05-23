@@ -1,48 +1,83 @@
-/* *
-**计时器
- */
-#Timer_M5000_run[0](IN := #Common_M_1_run.in_time.%X0, PT := #Retain_M5000_run.preTime);
-#Timer_M5000_run[1](IN := #Common_M_1_run.in_time.%X1, PT := #Retain_M5000_run.openTime_1);
-/* *
-**预处理
- */
-IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.bnt_run AND NOT #Common_M_1_run.busy THEN
+FUNCTION_BLOCK Extraction
+    VAR_GLOBAL
+        //提取单元自动启动关键属性--结构体
+        TYPE Common_M_1_run : STRUCT
+                bnt_run : BOOL; (* 自动启动 *)
+                bnt_stop : BOOL; (* 自动停止 *)
+                todo : BOOL; (* 是否跳过步骤1 *)
+                busy : BOOL; (* 自动正在执行 *)
+                step : INT; (* 自动运行步骤 *)
+                in_time : WORD; (* 控制计时器输入IN通断 *)
+                manual_enable : BOOL; (* 手动模式按钮 *)
+                state : INT; (* 提取单元状态都在此处显示 *)
+            END_STRUCT
+        END_TYPE
+
+        //提取单元自动启动设定时间--结构体
+        TYPE Retain_M5000_run : STRUCT
+                preTime : DINT; (* 自动启动预处理时间 *)
+                openTime_1 : DINT; (* 自动启动电机延时打开时间 *)
+            END_STRUCT
+        END_TYPE
+
+        //提取单元启动--通电延时计时器
+        Timer_M5000_run : ARRAY[0..2] of TON_TIME;
+        (* 
+            Timer_M5000_run[0]......预处理--计时器
+            Timer_M5000_run[1]......电机打开延时--计时器
+        *)  
+    END_VAR
+
+    /* *
+    **计时器
+    */
+    #Timer_M5000_run[0](IN := #Common_M_1_run.in_time.%X0, PT := #Retain_M5000_run.preTime);
+    #Timer_M5000_run[1](IN := #Common_M_1_run.in_time.%X1, PT := #Retain_M5000_run.openTime_1);
+
+    /* *
+    **预处理
+    */
+    IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.bnt_run AND NOT #Common_M_1_run.busy THEN
     #Common_M_1_run.state := 1;
-    #Common_M_1_run.STEP := 1;
+    #Common_M_1_run.step := 1;
     #Common_M_1_run.in_time := 0;
     #Common_M_1_run.todo := FALSE;
     #Common_M_1_run.in_time.%X0 := TRUE;
-END_IF;
-IF #Common_M_1_run.in_time.%X0 AND #Timer_M5000_run[0].Q THEN
+    END_IF;
+    IF #Common_M_1_run.in_time.%X0 AND #Timer_M5000_run[0].Q THEN
     #Common_M_1_run.bnt_run := FALSE;
     #Common_M_1_run.busy := TRUE;
-ELSE
+    ELSE
     #Common_M_1_run.busy := FALSE;
-END_IF;
-//急停时
-IF NOT "Global".Emergency.Extraction_1 THEN
+    END_IF;
+
+    //急停时
+    IF NOT "Global".Emergency.Extraction_1 THEN
     #Common_M_1_run.state := 0;
-    #Common_M_1_run.STEP := 0;
+    #Common_M_1_run.step := 0;
     #Common_M_1_run.in_time := 0;
     #Common_M_1_run.bnt_run := FALSE;
-END_IF;
-//手动时
-IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.manual_enable THEN
+    END_IF;
+
+    //手动时
+    IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.manual_enable THEN
     #Common_M_1_run.state := 2;
-    #Common_M_1_run.STEP := 0;
+    #Common_M_1_run.step := 0;
     #Common_M_1_run.in_time := 0;
     #Common_M_1_run.bnt_run := FALSE;
-END_IF;
-//停止时
-IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.bnt_stop THEN
-    #Common_M_1_run.STEP := 0;
+    END_IF;
+
+    //停止时
+    IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.bnt_stop THEN
+    #Common_M_1_run.step := 0;
     #Common_M_1_run.in_time := 0;
     #Common_M_1_run.bnt_run := FALSE;
-END_IF;
-/* *
-**运行时
- */
- IF #Common_M_1_run.busy AND #Common_M_1_run.state = 1 THEN
+    END_IF;
+
+    /* *
+    **运行时
+    */
+    IF #Common_M_1_run.busy AND #Common_M_1_run.state = 1 THEN
     //step1
     IF #Common_M_1_run.step = 1 THEN
         IF NOT "M5203-DO" THEN
@@ -456,4 +491,6 @@ END_IF;
             #Common_M_1_run.step := 100;
         END_IF;
     END_IF;
-END_IF;
+    END_IF;    
+END_FUNCTION_BLOCK
+
