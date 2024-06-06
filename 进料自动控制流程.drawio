@@ -1,0 +1,241 @@
+<mxfile host="65bd71144e">
+    <diagram id="wImYX9leGLHuQFXVxH7y" name="第 1 页">
+        <mxGraphModel dx="1168" dy="1942" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="384" value="F7001" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="18" y="-1065" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="385" value="频率：15&amp;nbsp; -&amp;nbsp; 20Hz" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="384" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="388" value="FIT7101" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="18" y="-995" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="389" value="进水流量：8 -&amp;nbsp; 12m³/h" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="388" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <UserObject label="FIT7201" tags="" id="390">
+                    <mxCell style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" parent="1" vertex="1">
+                        <mxGeometry x="18" y="-925" width="140" height="60" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="391" value="进料流量：14 -&amp;nbsp; 15m³/h" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="390" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="427" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="425" target="426" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="425" value="Start" style="ellipse;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="-1086" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="431" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="426" target="430" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="426" value="确认现场&lt;br&gt;人员是否在安全&lt;br&gt;区域" style="rhombus;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="-1015" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="440" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="430" target="439" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="430" value="检查机封水&lt;br&gt;是否正常" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="-884" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="448" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="439" target="443" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="439" value="确认排空阀&lt;br&gt;V8026是否关闭" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="-746" width="120" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="441" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="443" target="444" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="442" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="443" target="446" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="443" value="P8001是否打开" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="-606" width="120" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="444" value="进水PID自动模式&lt;br&gt;进料PID自动模式" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="-441" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="445" value="是" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="381" y="-507" width="38" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="446" value="进水PID手动模式&lt;br&gt;进料PID手动模式&lt;br&gt;进水阀FV7101全关" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="-598.5" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="447" value="否" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="495" y="-600" width="40" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="449" value="是" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="381" y="-651" width="38" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="450" value="是" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="381" y="-792" width="38" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="451" value="是" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="381" y="-923" width="38" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="458" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="452" target="457" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="452" value="Start" style="ellipse" parent="1" vertex="1">
+                    <mxGeometry x="369" y="-280" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="462" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="457" target="461" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="457" value="启动刮刀&lt;br&gt;K7001" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="349" y="-185" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="464" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="461" target="463" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="461" value="计时器&lt;br&gt;5s" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="369" y="-73" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="466" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="463" target="465" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="463" value="启动搅拌器&lt;br&gt;A7001" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="349" y="79" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="468" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="465" target="467" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="465" value="计时器&lt;br&gt;5s" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="369" y="204" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="470" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="467" target="469" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="467" value="启动真空转鼓&lt;br&gt;F7001" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="349" y="349" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="472" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="469" target="471" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="469" value="计时器&lt;br&gt;5s" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="369" y="479" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="484" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="471" target="483" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="471" value="启动阀门V8001" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="349" y="643" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="485" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="477" target="483" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="569" y="775"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="477" value="关闭阀门V8006" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="508" y="643" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="479" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" edge="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="409" y="613" as="sourcePoint"/>
+                        <mxPoint x="569" y="643" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="569" y="613"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="487" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="483" target="486" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="483" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="384" y="756" width="50" height="37" as="geometry"/>
+                </mxCell>
+                <mxCell id="489" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="486" target="488" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="486" value="计时器&lt;br&gt;5s" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="369" y="850" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="491" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="488" target="490" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="488" value="启动淀粉乳泵&lt;br&gt;P8001" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="349" y="987" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="493" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" source="490" target="492" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="490" value="计时器&lt;br&gt;5s" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="369" y="1117" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="497" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;" parent="1" source="492" target="496" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="492" value="启动皮带输送机&lt;br&gt;T7001" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="349" y="1261" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="494" value="&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span&gt;当液位检测到达脱水机料槽高度值后，&lt;/span&gt;高度值160mm（液位设定值可调），范围：0-200mm。（此处液位高度根据现场情况进行调整。）&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;fontFamily=Helvetica;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="1251" width="289" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="499" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;" parent="1" source="496" target="498" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="496" value="计时器&lt;br&gt;5s" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="369" y="1391" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="501" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;" parent="1" source="498" target="500" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="498" value="启动滤液泵&lt;br&gt;P7006" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="349" y="1533" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="503" value="" style="edgeStyle=none;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#FFFFFF;" parent="1" source="500" target="502" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="500" value="计时器&lt;br&gt;5s" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="369" y="1663" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="502" value="真空泵&lt;br&gt;P7001" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="349" y="1809" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="504" value="&lt;p style=&quot;&quot; class=&quot;MsoNormal&quot;&gt;真空泵启动前先打开进水阀V7001，阀门打开后间隔T101：5秒（真空泵启动延迟时间T101：0~30秒），再启动真空泵，阀门V7001打开后一直常开。真空泵P7001关闭时阀门关闭。&lt;span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;fontFamily=Helvetica;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="1809" width="296.5" height="91" as="geometry"/>
+                </mxCell>
+                <mxCell id="505" value="&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span&gt;进水调节阀FV&lt;/span&gt;&lt;span&gt;7101&lt;/span&gt;&lt;span&gt;在泵P&lt;/span&gt;&lt;span&gt;8001&lt;/span&gt;&lt;span&gt;开启时打开自动PID，在泵P&lt;/span&gt;&lt;span&gt;8001&lt;/span&gt;&lt;span&gt;关闭，FV&lt;/span&gt;&lt;span&gt;7101&lt;/span&gt;&lt;span&gt;全部关闭。&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span&gt;V8016, V8021&lt;/span&gt;&lt;span&gt;关闭，溢流阀V&lt;/span&gt;&lt;span&gt;8026&lt;/span&gt;&lt;span&gt;打开。（&lt;/span&gt;&lt;span&gt;在启动的时候，确保外排阀门都是关闭的。）&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;fontFamily=Helvetica;fontSize=12;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="-205" width="296.5" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="506" value="第1步" style="shape=offPageConnector;whiteSpace=wrap;html=1;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="-185" width="90" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="509" value="1.启动前设置检查" style="text;strokeColor=none;fillColor=none;html=1;fontSize=20;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="18" y="-1157" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="510" value="2.一键启动程序" style="text;strokeColor=none;fillColor=none;html=1;fontSize=20;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="-340" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="511" value="第2步" style="shape=offPageConnector;whiteSpace=wrap;html=1;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="86.5" width="90" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="512" value="第3步" style="shape=offPageConnector;whiteSpace=wrap;html=1;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="356.5" width="90" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="513" value="第4步" style="shape=offPageConnector;whiteSpace=wrap;html=1;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="650.5" width="90" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="514" value="第5步" style="shape=offPageConnector;whiteSpace=wrap;html=1;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="994.5" width="90" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="515" value="第6步" style="shape=offPageConnector;whiteSpace=wrap;html=1;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="1268.5" width="90" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="516" value="第7步" style="shape=offPageConnector;whiteSpace=wrap;html=1;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="1540.5" width="90" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="517" value="第8步" style="shape=offPageConnector;whiteSpace=wrap;html=1;direction=north;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="1816.5" width="90" height="45" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
