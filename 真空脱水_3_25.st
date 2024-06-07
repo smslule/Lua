@@ -43,19 +43,19 @@ FUNCTION_BLOCK Dewater
 
     // 预处理
     IF "Global".Emergency.Dewater_1 THEN
-    IF #Dewater_1.bnt_run AND NOT #Dewater_1.run.busy THEN
-        #Dewater_1.run.todo := TRUE;
-    END_IF;
-    IF #Dewater_1.run.todo THEN
-        #Dewater_1.state := 1;
-        #Dewater_1.run.step := 1;
-        #Dewater_1.run.skip := FALSE;
-        #Dewater_1.run.in_time := 0;
-        #Dewater_1.run.in_time.%X0 := TRUE;
-        "ALARM1-O" := TRUE;
-        #Dewater_1.bnt_run := FALSE;
-        #Dewater_1.run.todo := FALSE;
-    END_IF;
+        IF #Dewater_1.bnt_run AND NOT #Dewater_1.run.busy THEN
+            #Dewater_1.run.todo := TRUE;
+        END_IF;
+        IF #Dewater_1.run.todo THEN
+            #Dewater_1.state := 1;
+            #Dewater_1.run.step := 1;
+            #Dewater_1.run.skip := FALSE;
+            #Dewater_1.run.in_time := 0;
+            #Dewater_1.run.in_time.%X0 := TRUE;
+            "ALARM1-O" := TRUE;
+            #Dewater_1.bnt_run := FALSE;
+            #Dewater_1.run.todo := FALSE;
+        END_IF;
         
     END_IF;
 
