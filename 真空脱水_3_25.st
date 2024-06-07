@@ -45,6 +45,7 @@ FUNCTION_BLOCK Dewater
     // 预处理
     IF "Global".Emergency.Dewater_1 THEN
         IF #Dewater_1.bnt_run AND NOT #Dewater_1.run.busy THEN
+            #Dewater_1.error_id := 0;
             IF NOT "V8016-O" AND NOT "V8021-O" AND "V8026-O" THEN
                 #Dewater_1.run.todo := TRUE;
             ELSE
@@ -228,12 +229,14 @@ FUNCTION_BLOCK Dewater
                         RETURN;
                     END_IF;
                 END_IF;
-                #Dewater_1.run.in_time.%X1 := TRUE;
-                IF #Dewater_1.run.in_time.%X1 AND #Timer_D_1[1].Q THEN
-                    "P7006-DO" := TRUE;
-                    #Dewater_1.run.in_time.%X1 := FALSE;
-                    #Dewater_1.run.step := 8;
-                    RETURN;
+                IF "Global".Disp_LIT_7001 > "Global".set_LIT_7001 THEN
+                    #Dewater_1.run.in_time.%X1 := TRUE;
+                    IF #Dewater_1.run.in_time.%X1 AND #Timer_D_1[1].Q THEN
+                        "P7006-DO" := TRUE;
+                        #Dewater_1.run.in_time.%X1 := FALSE;
+                        #Dewater_1.run.step := 8;
+                        RETURN;
+                    END_IF; 
                 END_IF;
             END_IF;
             IF "P7006-DO" THEN
