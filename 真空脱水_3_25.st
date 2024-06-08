@@ -45,14 +45,10 @@ FUNCTION_BLOCK Dewater
     // 预处理
     IF "Global".Emergency.Dewater_1 THEN
         IF #Dewater_1.bnt_run AND NOT #Dewater_1.run.busy THEN
-            #Dewater_1.error_id := 0;
-            IF NOT "V8016-O" AND NOT "V8021-O" AND "V8026-O" THEN
-                #Dewater_1.run.todo := TRUE;
-            ELSE
-                #Dewater_1.run.todo := FALSE;
-                #Dewater_1.error_id := 101;
-                #Dewater_1.state := 0;
-            END_IF;
+            "V8016-O" := FALSE;
+            "V8021-O" := FALSE;
+            "V8026-O" := TRUE;
+            #Dewater_1.run.todo := TRUE;
         END_IF;
         IF #Dewater_1.run.todo THEN
             #Dewater_1.state := 1;
