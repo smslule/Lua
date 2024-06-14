@@ -38,40 +38,40 @@ FUNCTION_BLOCK Extraction
     **预处理
     */
     IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.bnt_run AND NOT #Common_M_1_run.busy THEN
-    #Common_M_1_run.state := 1;
-    #Common_M_1_run.step := 1;
-    #Common_M_1_run.in_time := 0;
-    #Common_M_1_run.todo := FALSE;
-    #Common_M_1_run.in_time.%X0 := TRUE;
+        #Common_M_1_run.state := 1;
+        #Common_M_1_run.step := 1;
+        #Common_M_1_run.in_time := 0;
+        #Common_M_1_run.todo := FALSE;
+        #Common_M_1_run.in_time.%X0 := TRUE;
     END_IF;
     IF #Common_M_1_run.in_time.%X0 AND #Timer_M5000_run[0].Q THEN
-    #Common_M_1_run.bnt_run := FALSE;
-    #Common_M_1_run.busy := TRUE;
+        #Common_M_1_run.bnt_run := FALSE;
+        #Common_M_1_run.busy := TRUE;
     ELSE
-    #Common_M_1_run.busy := FALSE;
+        #Common_M_1_run.busy := FALSE;
     END_IF;
 
     //急停时
     IF NOT "Global".Emergency.Extraction_1 THEN
-    #Common_M_1_run.state := 0;
-    #Common_M_1_run.step := 0;
-    #Common_M_1_run.in_time := 0;
-    #Common_M_1_run.bnt_run := FALSE;
+        #Common_M_1_run.state := 0;
+        #Common_M_1_run.step := 0;
+        #Common_M_1_run.in_time := 0;
+        #Common_M_1_run.bnt_run := FALSE;
     END_IF;
 
     //手动时
     IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.manual_enable THEN
-    #Common_M_1_run.state := 2;
-    #Common_M_1_run.step := 0;
-    #Common_M_1_run.in_time := 0;
-    #Common_M_1_run.bnt_run := FALSE;
+        #Common_M_1_run.state := 2;
+        #Common_M_1_run.step := 0;
+        #Common_M_1_run.in_time := 0;
+        #Common_M_1_run.bnt_run := FALSE;
     END_IF;
 
     //停止时
     IF "Global".Emergency.Extraction_1 AND #Common_M_1_run.bnt_stop THEN
-    #Common_M_1_run.step := 0;
-    #Common_M_1_run.in_time := 0;
-    #Common_M_1_run.bnt_run := FALSE;
+        #Common_M_1_run.step := 0;
+        #Common_M_1_run.in_time := 0;
+        #Common_M_1_run.bnt_run := FALSE;
     END_IF;
 
     /* *
